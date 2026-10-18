@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore academic programs at CUTM - Centurion University of Technology and Management: B.Tech (CSE, ECE, Mechanical, Civil), Diploma, B.Sc Agriculture, BBA, and B.Sc Nursing.">
+    <title>Academic Courses &amp; Departments | CUTM</title>
+    <link rel="icon" type="image/png" href="images/cutm_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .courses-hero {
+            position: relative;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(10,32,60,0.94) 0%, rgba(10,32,60,0.80) 60%, rgba(10,32,60,0.45) 100%),
+                        url("images/cutm_photo_3.webp") center/cover;
+            padding: 60px 0;
+        }
+        .search-courses-bar {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        .search-courses-bar input {
+            width: 100%;
+            height: 48px;
+            padding: 0 16px 0 46px;
+            border: 1px solid var(--line);
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+            box-shadow: 0 4px 18px rgba(16,43,78,0.06);
+        }
+        .search-courses-bar input:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(20,88,166,0.15);
+        }
+        .search-icon-pos {
+            position: absolute;
+            left: 16px;
+            top: 14px;
+            color: #8393a7;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="notice-banner">
+        <div class="container notice-inner">
+            <span><strong class="notice-pill">CUTM Admissions 2026-27 Open</strong> Apply for B.Tech (CSE, ECE, Mechanical, Civil), Diploma, Agriculture, BBA &amp; B.Sc Nursing.</span>
+            <span>Helpline: <strong>1800-123-CUTM</strong> | <a class="notice-link" href="admissions.html">Online Admissions Portal ↗</a></span>
+        </div>
+    </div>
+
+    <div class="topline">
+        <div class="container topline-inner">
+            <span>CUTM · Centurion University of Technology and Management | Shaping Lives, Empowering Communities</span>
+            <span>Admissions Desk: <a href="mailto:admissions@cutm.ac.in">admissions@cutm.ac.in</a> &nbsp;|&nbsp; <a href="login.html" style="font-weight:700;color:var(--gold);">🔐 Login / Register</a></span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="CUTM home">
+                <img src="images/cutm_logo.png" alt="CUTM Logo" class="brand-logo-img">
+                <span class="brand-name">CUTM<span class="brand-caption">CENTURION UNIVERSITY · SHAPING LIVES</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="overview.html">About</a>
+                <a class="active" href="courses.html">Courses</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="index.html#events">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cta" href="admissions.html">Apply Now <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Courses Hero -->
+        <section class="courses-hero">
+            <div class="container">
+                <span class="eyebrow" style="color:#ffcf5c">Academics &amp; Faculties</span>
+                <h1 style="max-width:740px;margin:16px 0 12px;font:800 clamp(34px, 5vw, 52px)/1.15 Manrope, sans-serif;">
+                    Programs Designed for Future Leaders
+                </h1>
+                <p style="max-width:620px;color:#e3ecf5;font-size:15px;line-height:1.75;margin:0 0 20px;">
+                    Explore industry-aligned degree and diploma programs across Engineering, Agriculture, Polytechnic, Business Management, and Healthcare Sciences.
+                </p>
+                <div>
+                    <a class="button" href="admissions.html" style="background:var(--gold);color:var(--navy)">Apply for Admission 2026-27 <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Catalog Section -->
+        <section class="section pale">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Explore Programs</span>
+                    <h2>All Departments &amp; Degree Programs</h2>
+                    <p>Select a department below or search to find eligibility, duration, syllabus highlights, and career prospects.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-courses-bar">
+                    <span class="search-icon-pos" aria-hidden="true">⌕</span>
+                    <input type="search" id="courseSearchInput" placeholder="Search by course name, branch (e.g. CSE, Civil, Nursing, Agriculture)..." aria-label="Search courses">
+                </div>
+
+                <!-- Department Filters -->
+                <div class="filters-bar" role="group" aria-label="Filter courses by department">
+                    <button class="filter-pill active" data-filter="all">All Departments</button>
+                    <button class="filter-pill" data-filter="engineering">Engineering &amp; Tech (B.Tech)</button>
+                    <button class="filter-pill" data-filter="diploma">Polytechnic &amp; Diploma</button>
+                    <button class="filter-pill" data-filter="agriculture">Agricultural Sciences</button>
+                    <button class="filter-pill" data-filter="management">Management &amp; Business</button>
+                    <button class="filter-pill" data-filter="nursing">Healthcare &amp; Nursing</button>
+                </div>
+
+                <!-- Courses Grid -->
+                <div class="card-grid" id="courseGrid">
+                    <!-- 1. B.Tech CSE -->
+                    <article class="course-card" data-category="engineering" data-keywords="btech cse computer science engineering ai artificial intelligence machine learning software dev coding">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span style="font-size:24px">💻</span>
+                            </div>
+                            <h3>B.Tech - Computer Science &amp; Engineering (CSE)</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Cutting-edge engineering program covering Artificial Intelligence, Machine Learning, Cloud Systems, Cyber Security, Full-Stack Web Development, and Big Data.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>4 Years (8 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹1,10,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 PCM (Min 50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>120 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Specializations in AI, Data Science &amp; Cloud</li>
+                                <li>High-performance GPU &amp; Cloud Computing Labs</li>
+                                <li>Highest Placement: 32 LPA | Top MNC recruiters</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=cse" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 2. B.Tech ECE -->
+                    <article class="course-card" data-category="engineering" data-keywords="btech ece electronics communication engineering vlsi embedded systems iot robotics 5g telecom">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span style="font-size:24px">📡</span>
+                            </div>
+                            <h3>B.Tech - Electronics &amp; Communication (ECE)</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Specialized engineering curriculum in VLSI microchip design, Embedded Systems, Internet of Things (IoT), Robotics, Signal Processing, and next-gen 5G networks.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>4 Years (8 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹95,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 PCM (Min 50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>60 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Advanced VLSI Design &amp; Cadence EDA Tools</li>
+                                <li>Robotics, Drone &amp; IoT Prototyping Labs</li>
+                                <li>Recruiters: Intel, Qualcomm, Texas Instruments</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=ece" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 3. B.Tech Mechanical -->
+                    <article class="course-card" data-category="engineering" data-keywords="btech mechanical machnical engineering cad cam robotics ev electric vehicle automotive manufacturing">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span style="font-size:24px">⚙️</span>
+                            </div>
+                            <h3>B.Tech - Mechanical Engineering</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Modern mechanical engineering emphasizing Robotics, CAD/CAM/CAE design, Electric Vehicle (EV) technology, Automation, and Advanced Materials.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>4 Years (8 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹90,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 PCM (Min 50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>60 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>EV Powertrain &amp; Industrial Robotics Labs</li>
+                                <li>CNC Machining, 3D Printing &amp; Fabrication</li>
+                                <li>Tie-ups with Tata Motors, Mahindra, Bosch</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=mechanical" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 4. B.Tech Civil -->
+                    <article class="course-card" data-category="engineering" data-keywords="btech civil engineering structural smart cities building surveying gis infrastructure construction">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span style="font-size:24px">🏗️</span>
+                            </div>
+                            <h3>B.Tech - Civil Engineering</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Infrastructure design, Structural Analysis, Smart Cities planning, Green Building architecture, Geotechnical Surveying, and Environmental Engineering.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>4 Years (8 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹85,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 PCM (Min 50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>60 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Total Station, GPS &amp; Drone Surveying</li>
+                                <li>Earthquake-Resistant Structural Design Labs</li>
+                                <li>Partnerships with L&amp;T Construction &amp; NHAI</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=civil" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 5. Diploma Polytechnic -->
+                    <article class="course-card" data-category="diploma" data-keywords="diploma polytechnic technical 10th lateral entry mechanical civil electrical cse workshop">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge diploma">Polytechnic &amp; Diploma</span>
+                                <span style="font-size:24px">🔧</span>
+                            </div>
+                            <h3>Diploma in Engineering (Polytechnic)</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Career-focused polytechnic diploma offering streams in Mechanical, Civil, Electrical, and CSE with intensive workshop training &amp; lateral entry to B.Tech.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>3 Yrs (2 Yrs Lateral)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹45,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10th Pass (45%) / 12th ITI</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>120 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Hands-on Workshop &amp; Industrial Apprentice</li>
+                                <li>Direct Lateral Entry into B.Tech 2nd Year</li>
+                                <li>Immediate Junior Engineer (JE) employment</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=diploma" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 6. B.Sc Agriculture -->
+                    <article class="course-card" data-category="agriculture" data-keywords="bsc agriculture agriculure hons farming agronomy soil science horticulture botany crop agri tech">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge agriculture">Agricultural Sciences</span>
+                                <span style="font-size:24px">🌾</span>
+                            </div>
+                            <h3>B.Sc. (Hons.) Agriculture</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                ICAR-aligned agricultural degree integrating modern Agronomy, Precision Hydroponics, Soil Chemistry, Plant Breeding, Horticulture, and Agri-Business management.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>4 Years (8 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹80,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 PCB/PCM (Min 50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>60 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Dedicated 25-Acre Research Farmland &amp; Polyhouse</li>
+                                <li>Soil Testing, Plant Pathology &amp; Seed Labs</li>
+                                <li>Agri-Officer &amp; Fertilizer Corp placements</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=agriculture" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 7. BBA -->
+                    <article class="course-card" data-category="management" data-keywords="bba bachelor business administration management finance marketing hr commerce leadership">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge management">Management &amp; Business</span>
+                                <span style="font-size:24px">📊</span>
+                            </div>
+                            <h3>BBA - Bachelor of Business Administration</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Dynamic undergraduate program establishing solid fundamentals in Financial Management, Digital Marketing, Human Resources, Entrepreneurship, and Analytics.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>3 Years (6 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹65,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 Any Stream (45%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>90 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Case Study Methodology &amp; Live Industry Projects</li>
+                                <li>Paid Corporate Internships in Final Year</li>
+                                <li>Incubation Center Seed Funding for Startups</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=bba" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 8. B.Sc Nursing -->
+                    <article class="course-card" data-category="nursing" data-keywords="bsc nursing medical healthcare clinic hospital doctor health biology patient care">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge nursing">Nursing &amp; Healthcare</span>
+                                <span style="font-size:24px">🩺</span>
+                            </div>
+                            <h3>B.Sc. Nursing (INC Approved)</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Professional clinical healthcare training covering Anatomy, Critical Care, Medical-Surgical Nursing, Pediatrics, and Patient Ethics with hospital rotations.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>4 Years (INC Approved)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹1,05,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>10+2 PCB &amp; Eng (Min 45-50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>60 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Clinical Postings in 500+ Bed Multi-specialty Hospital</li>
+                                <li>High-Tech Critical Care Simulation Mannequins</li>
+                                <li>100% Placement in Super-Speciality Networks</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=nursing" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+
+                    <!-- 9. MBA -->
+                    <article class="course-card" data-category="management" data-keywords="mba master business administration post graduate pg management finance marketing analytics">
+                        <div>
+                            <div class="course-card-top">
+                                <span class="dept-badge management">Postgraduate Studies</span>
+                                <span style="font-size:24px">▥</span>
+                            </div>
+                            <h3>MBA - Master of Business Administration</h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.65;margin-bottom:14px;">
+                                Advanced leadership degree focusing on Strategic Leadership, Business Analytics, International Marketing, and Financial Engineering for corporate careers.
+                            </p>
+                            <div class="course-meta-grid">
+                                <div class="course-meta-item">
+                                    <strong>Duration</strong>
+                                    <span>2 Years (4 Sems)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Annual Tuition</strong>
+                                    <span>₹1,20,000 / Year</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Eligibility</strong>
+                                    <span>Graduation in any discipline (50%)</span>
+                                </div>
+                                <div class="course-meta-item">
+                                    <strong>Approved Seats</strong>
+                                    <span>60 Seats</span>
+                                </div>
+                            </div>
+                            <ul class="course-highlights">
+                                <li>Dual Specializations in Analytics &amp; Finance</li>
+                                <li>CXO Mentorship &amp; Executive Networking</li>
+                                <li>Global Exchange Programs &amp; Study Tours</li>
+                            </ul>
+                        </div>
+                        <div class="course-card-actions">
+                            <a class="button btn-sm" href="admissions.html?course=mba" style="flex:1">Apply Now →</a>
+                            <a class="button btn-sm btn-outline" href="contact.html">Inquire</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section" style="background:#fff;">
+            <div class="container">
+                <div class="contact-layout" style="align-items:center;">
+                    <div>
+                        <span class="eyebrow">Start your journey</span>
+                        <h2 style="font:800 30px/1.2 Manrope, sans-serif;color:var(--navy);margin:10px 0 14px;">
+                            Need Guidance on Which Course is Right for You?
+                        </h2>
+                        <p style="color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 20px;">
+                            Our expert admission counselors offer personalized career counseling, eligibility evaluations, and scholarship assistance.
+                        </p>
+                        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+                            <a class="button" href="admissions.html">Apply for Admission 2026-27 →</a>
+                            <a class="button btn-outline" href="contact.html">Talk to Admission Counselor</a>
+                        </div>
+                    </div>
+                    <div style="padding:28px;border-radius:12px;background:#f0f6fc;border:1px solid #d8e5f2;">
+                        <h3 style="margin:0 0 10px;color:var(--navy);font:800 20px Manrope, sans-serif;">Admissions Helpdesk</h3>
+                        <p style="color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:16px;">
+                            Call Toll-Free: <strong>1800-123-4567</strong><br>
+                            WhatsApp: <strong>+91 98765 43210</strong><br>
+                            Email: <strong>admissions@aiuniversity.edu</strong><br>
+                            Office Hours: Monday - Saturday (9:00 AM - 6:00 PM)
+                        </p>
+                        <a class="button btn-sm" href="admissions.html#calculator" style="background:var(--navy)">Check Scholarship Eligibility ⚡</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <strong>CUTM · CENTURION UNIVERSITY</strong>
+            <span>© 2026 Centurion University of Technology and Management (CUTM). Shaping lives, empowering communities.</span>
+            <a href="admissions.html">Admissions 2026</a>
+            <a href="login.html">Portal Login &amp; Register</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const menuButton = document.getElementById("menuToggle");
+        const menu = document.getElementById("navLinks");
+        menuButton.addEventListener("click", () => {
+            const open = menuButton.getAttribute("aria-expanded") !== "true";
+            menuButton.setAttribute("aria-expanded", String(open));
+            menu.classList.toggle("open", open);
+        });
+
+        // Search & Filter Logic
+        const searchInput = document.getElementById("courseSearchInput");
+        const filterPills = document.querySelectorAll(".filter-pill");
+        const courseCards = document.querySelectorAll(".course-card");
+        let activeFilter = "all";
+
+        function filterCourses() {
+            const query = searchInput.value.trim().toLowerCase();
+
+            courseCards.forEach(card => {
+                const category = card.dataset.category;
+                const keywords = (card.dataset.keywords || "").toLowerCase();
+                const cardText = card.textContent.toLowerCase();
+
+                const matchesFilter = (activeFilter === "all") || (category === activeFilter);
+                const matchesQuery = !query || cardText.includes(query) || keywords.includes(query);
+
+                if (matchesFilter && matchesQuery) {
+                    card.style.display = "flex";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+
+        filterPills.forEach(pill => {
+            pill.addEventListener("click", () => {
+                filterPills.forEach(p => p.classList.remove("active"));
+                pill.classList.add("active");
+                activeFilter = pill.dataset.filter;
+                filterCourses();
+            });
+        });
+
+        searchInput.addEventListener("input", filterCourses);
+    </script>
+</body>
+</html>

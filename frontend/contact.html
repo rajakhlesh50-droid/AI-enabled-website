@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact CUTM - Centurion University of Technology and Management regarding admissions, courses and campus visits.">
+    <title>Contact Us | CUTM</title>
+    <link rel="icon" type="image/png" href="images/cutm_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .contact-hero {
+            position: relative;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(10,32,60,0.92) 0%, rgba(10,32,60,0.76) 60%, rgba(10,32,60,0.40) 100%),
+                        url("images/cutm_photo_4.webp") center/cover;
+            padding: 60px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="notice-banner">
+        <div class="container notice-inner">
+            <span><strong class="notice-pill">CUTM Admissions 2026-27 Open</strong> Apply for B.Tech (CSE, ECE, Mech, Civil), Diploma, Agriculture, BBA &amp; B.Sc Nursing.</span>
+            <span>Helpline: <strong>1800-123-CUTM</strong> | <a class="notice-link" href="admissions.html">Admissions Portal ↗</a></span>
+        </div>
+    </div>
+
+    <div class="topline">
+        <div class="container topline-inner">
+            <span>CUTM · Centurion University of Technology and Management | Shaping Lives, Empowering Communities</span>
+            <span>Admissions Desk: <a href="mailto:admissions@cutm.ac.in">admissions@cutm.ac.in</a> &nbsp;|&nbsp; <a href="login.html" style="font-weight:700;color:var(--gold);">🔐 Login / Register</a></span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="CUTM home">
+                <img src="images/cutm_logo.png" alt="CUTM Logo" class="brand-logo-img">
+                <span class="brand-name">CUTM<span class="brand-caption">CENTURION UNIVERSITY · SHAPING LIVES</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="overview.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="index.html#events">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a class="active nav-cta" href="contact.html">Contact us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <span class="eyebrow" style="color:#ffcf5c">Get in Touch</span>
+                <h1 style="max-width:760px;margin:16px 0 12px;font:800 clamp(32px, 5vw, 50px)/1.15 Manrope, sans-serif;">
+                    Let's Connect with CUTM
+                </h1>
+                <p style="max-width:620px;color:#e3ecf5;font-size:15px;line-height:1.75;margin:0;">
+                    Have questions about admissions, courses, scholarships, hostel accommodations, or corporate partnerships? Our admissions and academic team is here to assist you.
+                </p>
+            </div>
+        </section>
+
+        <section class="section pale">
+            <div class="container contact-layout">
+                <aside class="contact-details">
+                    <span class="eyebrow">Admissions &amp; Campus Office</span>
+                    <h2>Here to Help You Succeed</h2>
+                    <p>Connect with our admissions desk, academic counselors, or student services for immediate assistance.</p>
+                    
+                    <p>
+                        <strong>Toll-Free Helpline</strong><br>
+                        1800-123-CUTM (1800-123-2886)
+                    </p>
+                    <p>
+                        <strong>Email Address</strong><br>
+                        <a href="mailto:admissions@cutm.ac.in">admissions@cutm.ac.in</a>
+                    </p>
+                    <p>
+                        <strong>Office Hours</strong><br>
+                        Monday to Saturday: 9:00 AM – 6:00 PM
+                    </p>
+                    <p>
+                        <strong>Quick Links</strong><br>
+                        <a href="admissions.html">Apply for Admission 2026-27 →</a><br>
+                        <a href="courses.html">Academic Degree Catalog →</a><br>
+                        <a href="gallery.html">Campus Photo Gallery →</a>
+                    </p>
+                </aside>
+
+                <form class="contact-form" id="contactForm">
+                    <h2>Send an Enquiry</h2>
+                    <label for="contactName">Your Name<input id="contactName" name="name" autocomplete="name" required maxlength="100"></label>
+                    <label for="contactEmail">Email Address<input id="contactEmail" name="email" type="email" autocomplete="email" required maxlength="254"></label>
+                    <label for="contactSubject">Subject / Interested Course<input id="contactSubject" name="subject" placeholder="e.g. B.Tech CSE Admission, Scholarship query" required maxlength="140"></label>
+                    <label for="contactMessage">Your Message<textarea id="contactMessage" name="message" required maxlength="3000"></textarea></label>
+                    <button class="button" type="submit">Submit Message →</button>
+                    <p class="muted" style="margin:0;font-size:11px;line-height:1.6">This opens your email application with your inquiry pre-filled to admissions@cutm.ac.in.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <strong>CUTM · CENTURION UNIVERSITY</strong>
+            <span>© 2026 Centurion University of Technology and Management (CUTM). Shaping lives, empowering communities.</span>
+            <a href="login.html">Portal Login &amp; Register</a>
+            <a href="index.html">Back to Home</a>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuToggle");
+        const menu = document.getElementById("navLinks");
+        menuButton.addEventListener("click", () => {
+            const open = menuButton.getAttribute("aria-expanded") !== "true";
+            menuButton.setAttribute("aria-expanded", String(open));
+            menu.classList.toggle("open", open);
+        });
+        document.getElementById("contactForm").addEventListener("submit", event => {
+            event.preventDefault();
+            const subject = encodeURIComponent(document.getElementById("contactSubject").value.trim());
+            const body = encodeURIComponent(
+                `Name: ${document.getElementById("contactName").value.trim()}\n` +
+                `Email: ${document.getElementById("contactEmail").value.trim()}\n\n` +
+                document.getElementById("contactMessage").value.trim()
+            );
+            window.location.href = `mailto:admissions@cutm.ac.in?subject=${subject}&body=${body}`;
+        });
+    </script>
+</body>
+</html>

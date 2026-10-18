@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Admissions 2026-2027 are open at CUTM - Centurion University of Technology and Management. Apply for B.Tech (CSE, ECE, Mechanical, Civil), Diploma, B.Sc Agriculture, BBA, and B.Sc Nursing.">
+    <title>Admissions 2026-2027 | CUTM</title>
+    <link rel="icon" type="image/png" href="images/cutm_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .admissions-hero {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(10,32,60,0.95) 0%, rgba(10,32,60,0.82) 60%, rgba(10,32,60,0.55) 100%),
+                        url("images/cutm_photo_5.webp") center/cover;
+            padding: 70px 0;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .dept-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
+        .dept-card {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 26px;
+            background: #fff;
+            box-shadow: var(--shadow-card);
+            transition: all .22s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .dept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: #cbd8e8;
+        }
+        .dept-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+        .dept-card-icon {
+            font-size: 28px;
+            background: #f0f6fc;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            border: 1px solid #dce8f4;
+        }
+        .dept-card h3 {
+            margin: 0 0 8px;
+            color: var(--navy);
+            font: 800 18px/1.3 Manrope, sans-serif;
+        }
+        .dept-card p {
+            margin: 0 0 16px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .dept-card-meta {
+            padding: 10px 12px;
+            background: #f8fafc;
+            border-radius: 6px;
+            border: 1px solid #edf2f7;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+        .scholarship-card {
+            padding: 24px;
+            border-radius: 10px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-card);
+            border-top: 4px solid var(--gold);
+        }
+        .scholarship-card h3 {
+            margin: 0 0 8px;
+            color: var(--navy);
+            font: 800 18px Manrope, sans-serif;
+        }
+        .scholarship-card p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        @media (max-width: 900px) {
+            .dept-overview-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .dept-overview-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="notice-banner">
+        <div class="container notice-inner">
+            <span><strong class="notice-pill">CUTM Admissions 2026-27 Open</strong> Applications invited for B.Tech (CSE, ECE, Mech, Civil), Diploma, Agriculture, BBA &amp; B.Sc Nursing.</span>
+            <span>Helpline: <strong>1800-123-CUTM</strong> | <a class="notice-link" href="#apply-now">Apply Online ↓</a></span>
+        </div>
+    </div>
+
+    <div class="topline">
+        <div class="container topline-inner">
+            <span>CUTM · Centurion University of Technology and Management | Shaping Lives, Empowering Communities</span>
+            <span>Admissions Desk: <a href="mailto:admissions@cutm.ac.in">admissions@cutm.ac.in</a> &nbsp;|&nbsp; <a href="login.html" style="font-weight:700;color:var(--gold);">🔐 Login / Register</a></span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="CUTM home">
+                <img src="images/cutm_logo.png" alt="CUTM Logo" class="brand-logo-img">
+                <span class="brand-name">CUTM<span class="brand-caption">CENTURION UNIVERSITY · SHAPING LIVES</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="overview.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a class="active" href="admissions.html">Admissions</a>
+                <a href="index.html#events">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cta" href="#apply-now">Apply Now <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Admissions Hero Section -->
+        <section class="admissions-hero">
+            <div class="container">
+                <span class="eyebrow" style="color:#ffcf5c">Admission Session 2026-2027</span>
+                <h1 style="max-width:760px;margin:18px 0 14px;font:800 clamp(34px, 5vw, 54px)/1.15 Manrope, sans-serif;">
+                    Shape Your Career with Future-Ready Degree Programs
+                </h1>
+                <p style="max-width:620px;color:#e3ecf5;font-size:16px;line-height:1.75;margin:0 0 22px;">
+                    Join India's premier multidisciplinary university. Offering advanced degrees in Engineering, Polytechnic, Agriculture, Business, and Healthcare with 100% placement support and industry mentorship.
+                </p>
+                <div class="hero-badges">
+                    <span class="hero-badge">✓ AICTE &amp; UGC Approved</span>
+                    <span class="hero-badge">✓ ₹2.5 Crore+ Scholarship Pool</span>
+                    <span class="hero-badge">✓ Top MNC Placements (Highest 32 LPA)</span>
+                    <span class="hero-badge">✓ 50+ Modern High-Tech Labs</span>
+                </div>
+                <div style="margin-top:24px;display:flex;gap:15px;flex-wrap:wrap;">
+                    <a class="button" href="#apply-now" style="background:var(--gold);color:var(--navy)">Fill Application Form <span aria-hidden="true">↓</span></a>
+                    <a class="button btn-outline" href="#calculator" style="color:#fff;border-color:rgba(255,255,255,0.4)">Check Eligibility &amp; Scholarship <span aria-hidden="true">✦</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application & Predictor Section -->
+        <section class="section pale" id="apply-now">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Online Application</span>
+                    <h2>Apply for Admission 2026-2027</h2>
+                    <p>Complete the form below to initiate your application. Our admissions counselors will guide you through seat allotment, scholarships, and campus visits.</p>
+                </div>
+
+                <div class="admissions-layout">
+                    <!-- Application Form -->
+                    <div class="admissions-form-panel">
+                        <h2>Application &amp; Admission Enquiry</h2>
+                        <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Please provide your authentic details. Fields marked with * are required.</p>
+                        
+                        <form class="admissions-form" id="admissionForm">
+                            <div class="form-row">
+                                <label for="applicantName">
+                                    Full Name *
+                                    <input type="text" id="applicantName" name="name" placeholder="e.g. Rahul Sharma" required maxlength="100">
+                                </label>
+                                <label for="applicantEmail">
+                                    Email Address *
+                                    <input type="email" id="applicantEmail" name="email" placeholder="e.g. rahul@example.com" required maxlength="120">
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="applicantPhone">
+                                    Mobile Number (10 Digits) *
+                                    <input type="tel" id="applicantPhone" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required maxlength="15">
+                                </label>
+                                <label for="applicantMarks">
+                                    10th / 12th Marks (%) *
+                                    <input type="number" id="applicantMarks" name="marks" min="30" max="100" step="0.1" placeholder="e.g. 78.5" required>
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="departmentSelect">
+                                    Department *
+                                    <select id="departmentSelect" required>
+                                        <option value="">-- Choose Department --</option>
+                                        <option value="Engineering & Technology">Engineering &amp; Technology</option>
+                                        <option value="Polytechnic & Diploma Studies">Polytechnic &amp; Diploma Studies</option>
+                                        <option value="Agricultural Sciences">Agricultural Sciences</option>
+                                        <option value="Management & Business Studies">Management &amp; Business Studies</option>
+                                        <option value="Nursing & Healthcare Sciences">Nursing &amp; Healthcare Sciences</option>
+                                    </select>
+                                </label>
+                                <label for="courseSelect">
+                                    Course / Specialization *
+                                    <select id="courseSelect" name="course" required>
+                                        <option value="">-- Choose Course --</option>
+                                        <optgroup label="Engineering & Technology (B.Tech)">
+                                            <option value="B.Tech Computer Science & Engineering (CSE)">B.Tech CSE (Computer Science &amp; Engg)</option>
+                                            <option value="B.Tech Electronics & Communication Engineering (ECE)">B.Tech ECE (Electronics &amp; Comm.)</option>
+                                            <option value="B.Tech Mechanical Engineering">B.Tech Mechanical Engineering</option>
+                                            <option value="B.Tech Civil Engineering">B.Tech Civil Engineering</option>
+                                        </optgroup>
+                                        <optgroup label="Diploma & Polytechnic">
+                                            <option value="Diploma in Engineering (Polytechnic)">Diploma in Engineering (Polytechnic)</option>
+                                        </optgroup>
+                                        <optgroup label="Agricultural Sciences">
+                                            <option value="B.Sc. (Hons.) Agriculture">B.Sc. (Hons.) Agriculture</option>
+                                        </optgroup>
+                                        <optgroup label="Management & Commerce">
+                                            <option value="BBA (Bachelor of Business Administration)">BBA (Bachelor of Business Admin)</option>
+                                        </optgroup>
+                                        <optgroup label="Healthcare & Nursing">
+                                            <option value="B.Sc. Nursing">B.Sc. Nursing (4 Years, INC Approved)</option>
+                                        </optgroup>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="applicantCity">
+                                    City / District
+                                    <input type="text" id="applicantCity" name="city" placeholder="e.g. New Delhi" maxlength="80">
+                                </label>
+                                <label for="applicantState">
+                                    State
+                                    <input type="text" id="applicantState" name="state" placeholder="e.g. Uttar Pradesh" maxlength="80">
+                                </label>
+                            </div>
+
+                            <label for="applicantMessage">
+                                Any Query or Additional Information (Optional)
+                                <textarea id="applicantMessage" name="message" rows="3" placeholder="Tell us if you need hostel facility, bus service, or scholarship queries..." maxlength="500"></textarea>
+                            </label>
+
+                            <div class="form-feedback" id="admissionFeedback" role="status"></div>
+
+                            <button type="submit" class="button" id="submitApplicationBtn" style="min-height:48px;font-size:14px">
+                                Submit Admission Application →
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- AI Predictor & Scholarship Card -->
+                    <div class="predictor-card" id="calculator">
+                        <span class="predictor-badge">✦ AI-Powered Evaluator</span>
+                        <h2>Admission Chance &amp; Scholarship Predictor</h2>
+                        <p style="color:#42556d;font-size:13px;line-height:1.65;margin-bottom:20px;">
+                            Input your academic percentage to evaluate your probability of direct admission and scholarship tier based on previous merit cutoffs.
+                        </p>
+
+                        <div style="display:grid;gap:14px;">
+                            <div>
+                                <label style="display:block;font-size:11px;font-weight:700;color:var(--navy);margin-bottom:6px;">Your 12th / 10th Marks (%)</label>
+                                <input type="number" id="predMarks" min="30" max="100" step="1" value="75" style="width:100%;height:44px;padding:0 12px;border:1px solid #bfd2e5;border-radius:6px;font-size:14px;">
+                            </div>
+                            <div>
+                                <label style="display:block;font-size:11px;font-weight:700;color:var(--navy);margin-bottom:6px;">Target Course</label>
+                                <select id="predCourse" style="width:100%;height:44px;padding:0 12px;border:1px solid #bfd2e5;border-radius:6px;font-size:13px;">
+                                    <option value="B.Tech Computer Science & Engineering (CSE)">B.Tech CSE</option>
+                                    <option value="B.Tech Electronics & Communication Engineering (ECE)">B.Tech ECE</option>
+                                    <option value="B.Tech Mechanical Engineering">B.Tech Mechanical</option>
+                                    <option value="B.Tech Civil Engineering">B.Tech Civil</option>
+                                    <option value="Diploma in Engineering (Polytechnic)">Diploma (Polytechnic)</option>
+                                    <option value="B.Sc. (Hons.) Agriculture">B.Sc. Agriculture</option>
+                                    <option value="BBA (Bachelor of Business Administration)">BBA</option>
+                                    <option value="B.Sc. Nursing">B.Sc. Nursing</option>
+                                </select>
+                            </div>
+                            <button class="button" id="calcBtn" type="button" style="width:100%;background:var(--navy);min-height:44px;">
+                                Predict Admission Chances ⚡
+                            </button>
+                        </div>
+
+                        <div class="predictor-result-box" id="predResult">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+                                <strong style="font-size:13px;color:var(--navy)">Admission Probability:</strong>
+                                <span class="prob-tag high" id="predProbTag">High Chance</span>
+                            </div>
+                            <p id="predMessage" style="font-size:12px;color:#334155;margin:0 0 10px;line-height:1.6;">
+                                Great score! High chance of admission in your selected course during the first merit counseling.
+                            </p>
+                            <div style="padding:10px 12px;background:#f0fdf4;border-radius:6px;border:1px solid #bbf7d0;">
+                                <strong style="display:block;font-size:11px;color:#15803d;text-transform:uppercase;">Scholarship Estimate:</strong>
+                                <span id="predScholarship" style="font-size:13px;font-weight:700;color:#166534">Eligible for 25% Merit Scholarship</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top:22px;padding:14px;background:#ffffffa0;border-radius:8px;font-size:11px;color:var(--muted);line-height:1.6">
+                            ℹ️ Note: Predictions are indicative based on AI University's historical cutoffs and seat matrix. Final admission depends on document verification.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Departments & Courses Offered Detail -->
+        <section class="section" id="programs">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Academic Offerings</span>
+                    <h2>Departments &amp; Programs Open for 2026-27</h2>
+                    <p>Explore detailed course duration, eligibility guidelines, and annual fees across all our faculties.</p>
+                </div>
+
+                <div class="dept-overview-grid">
+                    <!-- B.Tech CSE -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span class="dept-card-icon">💻</span>
+                            </div>
+                            <h3>B.Tech - Computer Science &amp; Engg (CSE)</h3>
+                            <p>Specializations in Artificial Intelligence, Machine Learning, Cloud Computing, Cyber Security, and Full-Stack Development.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 4 Years (8 Semesters)</div>
+                                <div><strong>Eligibility:</strong> 10+2 with PCM (Min 50%)</div>
+                                <div><strong>Annual Fee:</strong> ₹1,10,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="B.Tech Computer Science & Engineering (CSE)" data-dept="Engineering & Technology">
+                            Apply for B.Tech CSE →
+                        </button>
+                    </div>
+
+                    <!-- B.Tech ECE -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span class="dept-card-icon">📡</span>
+                            </div>
+                            <h3>B.Tech - Electronics &amp; Comm. (ECE)</h3>
+                            <p>Focus on VLSI Design, Embedded Systems, Internet of Things (IoT), Robotics, and 5G Wireless Communications.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 4 Years (8 Semesters)</div>
+                                <div><strong>Eligibility:</strong> 10+2 with PCM (Min 50%)</div>
+                                <div><strong>Annual Fee:</strong> ₹95,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="B.Tech Electronics & Communication Engineering (ECE)" data-dept="Engineering & Technology">
+                            Apply for B.Tech ECE →
+                        </button>
+                    </div>
+
+                    <!-- B.Tech Mechanical -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span class="dept-card-icon">⚙️</span>
+                            </div>
+                            <h3>B.Tech - Mechanical Engineering</h3>
+                            <p>Robotics, CAD/CAM/CAE design, Electric Vehicle (EV) systems, Automation, and Advanced Materials Manufacturing.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 4 Years (8 Semesters)</div>
+                                <div><strong>Eligibility:</strong> 10+2 with PCM (Min 50%)</div>
+                                <div><strong>Annual Fee:</strong> ₹90,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="B.Tech Mechanical Engineering" data-dept="Engineering & Technology">
+                            Apply for Mechanical →
+                        </button>
+                    </div>
+
+                    <!-- B.Tech Civil -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge engineering">Engineering &amp; Tech</span>
+                                <span class="dept-card-icon">🏗️</span>
+                            </div>
+                            <h3>B.Tech - Civil Engineering</h3>
+                            <p>Smart City Infrastructure, Structural Engineering, Green Building Architecture, Total Station &amp; GIS Surveying.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 4 Years (8 Semesters)</div>
+                                <div><strong>Eligibility:</strong> 10+2 with PCM (Min 50%)</div>
+                                <div><strong>Annual Fee:</strong> ₹85,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="B.Tech Civil Engineering" data-dept="Engineering & Technology">
+                            Apply for Civil Engg →
+                        </button>
+                    </div>
+
+                    <!-- Diploma Polytechnic -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge diploma">Polytechnic</span>
+                                <span class="dept-card-icon">🔧</span>
+                            </div>
+                            <h3>Diploma in Engineering (Polytechnic)</h3>
+                            <p>Skill-based training in Mechanical, Civil, Electrical, and CSE with heavy workshop practice &amp; lateral entry to B.Tech 2nd year.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 3 Years (2 Yrs Lateral)</div>
+                                <div><strong>Eligibility:</strong> 10th Pass (Min 45%) / 12th ITI</div>
+                                <div><strong>Annual Fee:</strong> ₹45,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="Diploma in Engineering (Polytechnic)" data-dept="Polytechnic & Diploma Studies">
+                            Apply for Diploma →
+                        </button>
+                    </div>
+
+                    <!-- B.Sc Agriculture -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge agriculture">Agricultural Sciences</span>
+                                <span class="dept-card-icon">🌾</span>
+                            </div>
+                            <h3>B.Sc. (Hons.) Agriculture</h3>
+                            <p>Modern Agronomy, Precision Farming, Soil Science, Horticulture, Agri-Tech, and Organic Farming on university research farms.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 4 Years (8 Semesters)</div>
+                                <div><strong>Eligibility:</strong> 10+2 PCB/PCM/Agri (Min 50%)</div>
+                                <div><strong>Annual Fee:</strong> ₹80,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="B.Sc. (Hons.) Agriculture" data-dept="Agricultural Sciences">
+                            Apply for Agriculture →
+                        </button>
+                    </div>
+
+                    <!-- BBA -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge management">Management</span>
+                                <span class="dept-card-icon">📊</span>
+                            </div>
+                            <h3>BBA - Bachelor of Business Admin</h3>
+                            <p>Modern Business Management, Financial Analytics, Marketing Strategy, Entrepreneurship, and Corporate Internships.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 3 Years (6 Semesters)</div>
+                                <div><strong>Eligibility:</strong> 10+2 Any Stream (Min 45%)</div>
+                                <div><strong>Annual Fee:</strong> ₹65,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="BBA (Bachelor of Business Administration)" data-dept="Management & Business Studies">
+                            Apply for BBA →
+                        </button>
+                    </div>
+
+                    <!-- B.Sc Nursing -->
+                    <div class="dept-card">
+                        <div>
+                            <div class="dept-card-header">
+                                <span class="dept-badge nursing">Healthcare &amp; Nursing</span>
+                                <span class="dept-card-icon">🩺</span>
+                            </div>
+                            <h3>B.Sc. Nursing (INC Approved)</h3>
+                            <p>Comprehensive clinical training in 500+ bed multi-specialty partner hospitals, anatomy simulation, and global nursing careers.</p>
+                            <div class="dept-card-meta">
+                                <div><strong>Duration:</strong> 4 Years (INC Approved)</div>
+                                <div><strong>Eligibility:</strong> 10+2 with PCB &amp; Eng (Min 45-50%)</div>
+                                <div><strong>Annual Fee:</strong> ₹1,05,000 / Year</div>
+                            </div>
+                        </div>
+                        <button class="button btn-sm select-course-btn" data-course="B.Sc. Nursing" data-dept="Nursing & Healthcare Sciences">
+                            Apply for B.Sc Nursing →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admission Steps Roadmap -->
+        <section class="section pale">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">How to join</span>
+                    <h2>Simple 5-Step Admission Process</h2>
+                    <p>Transparent and smooth admission journey from application to classroom.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h4>Online Form</h4>
+                        <p>Fill out the admission registration form above with your basic academic credentials.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h4>Eligibility Review</h4>
+                        <p>Our admissions committee verifies eligibility &amp; calculates your merit scholarship.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h4>Counseling</h4>
+                        <p>Attend online or campus counseling session with faculty heads to finalize specialization.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">4</div>
+                        <h4>Seat Allotment</h4>
+                        <p>Receive your official Admission Offer Letter and provisional seat allotment.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">5</div>
+                        <h4>Enrollment</h4>
+                        <p>Submit documents, pay semester fee, and attend the grand campus orientation week!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarships Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Financial Support</span>
+                    <h2>Scholarships &amp; Fee Concessions</h2>
+                    <p>Merit should never be limited by financial boundaries. We award over ₹2.5 Crore in scholarships annually.</p>
+                </div>
+
+                <div class="dept-overview-grid">
+                    <div class="scholarship-card">
+                        <h3>Chancellor's Merit Scholarship</h3>
+                        <p>Students scoring 90%+ in 10+2 receive up to <strong>100% tuition waiver</strong>; 80%-89% get <strong>50% tuition waiver</strong>; 70%-79% get <strong>25% waiver</strong>.</p>
+                    </div>
+                    <div class="scholarship-card">
+                        <h3>Girl Child Empowerment</h3>
+                        <p>Special 15% tuition concession for female scholars pursuing B.Tech Engineering, Agriculture, and BBA programs to promote gender diversity in STEM.</p>
+                    </div>
+                    <div class="scholarship-card">
+                        <h3>Sports &amp; Armed Forces Quota</h3>
+                        <p>20% fee waiver for national/state level sports medalists and wards of defense personnel, CRPF, and police martyrs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section pale">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Need Help?</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about admission dates, hostel facilities, and eligibility.</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>What is the last date to apply for Admissions 2026-2027?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Phase 1 admissions are currently open until 30th June 2026. Early applicants receive priority hostel allotment and preferred specialization choices.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>Is direct admission available without entrance exam?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes! Direct merit-based admission is offered based on 10+2 / 10th board marks for candidates meeting the minimum cutoff criteria. National test scores (JEE Main, CUET, NEET) are also accepted for bonus scholarship scores.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>Are hostel and transport facilities available?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes, AI University offers air-cooled and AC hostels for boys and girls with high-speed Wi-Fi, 24/7 security, nutritious meals, and gym facilities. AC buses operate across 25+ city routes.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">
+                            <span>Can Diploma students take direct admission to B.Tech 2nd Year?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Yes, 3-year Polytechnic Diploma holders with 45%+ marks are eligible for Lateral Entry directly into the 2nd Year (3rd Semester) of B.Tech CSE, ECE, Mechanical, or Civil.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <strong>CUTM · CENTURION UNIVERSITY</strong>
+            <span>© 2026 Centurion University of Technology and Management (CUTM). Shaping lives, empowering communities.</span>
+            <a href="contact.html">Admission Helpline: 1800-123-CUTM</a>
+            <a href="login.html">Portal Login &amp; Register</a>
+        </div>
+    </footer>
+
+    <script>
+        const API_BASE = "http://127.0.0.1:5000";
+
+        // Navigation mobile menu
+        const menuButton = document.getElementById("menuToggle");
+        const menu = document.getElementById("navLinks");
+        menuButton.addEventListener("click", () => {
+            const open = menuButton.getAttribute("aria-expanded") !== "true";
+            menuButton.setAttribute("aria-expanded", String(open));
+            menu.classList.toggle("open", open);
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll(".faq-question").forEach(button => {
+            button.addEventListener("click", () => {
+                const item = button.closest(".faq-item");
+                item.classList.toggle("open");
+            });
+        });
+
+        // Auto pre-select course from URL params or course cards
+        const params = new URLSearchParams(window.location.search);
+        const preselectedCourse = params.get("course");
+        if (preselectedCourse) {
+            const courseSelect = document.getElementById("courseSelect");
+            for (let option of courseSelect.options) {
+                if (option.value.toLowerCase().includes(preselectedCourse.toLowerCase())) {
+                    courseSelect.value = option.value;
+                    break;
+                }
+            }
+        }
+
+        // Department to Course auto-sync
+        const deptSelect = document.getElementById("departmentSelect");
+        const courseSelect = document.getElementById("courseSelect");
+        deptSelect.addEventListener("change", () => {
+            const val = deptSelect.value;
+            if (val === "Engineering & Technology") {
+                courseSelect.value = "B.Tech Computer Science & Engineering (CSE)";
+            } else if (val === "Polytechnic & Diploma Studies") {
+                courseSelect.value = "Diploma in Engineering (Polytechnic)";
+            } else if (val === "Agricultural Sciences") {
+                courseSelect.value = "B.Sc. (Hons.) Agriculture";
+            } else if (val === "Management & Business Studies") {
+                courseSelect.value = "BBA (Bachelor of Business Administration)";
+            } else if (val === "Nursing & Healthcare Sciences") {
+                courseSelect.value = "B.Sc. Nursing";
+            }
+        });
+
+        // Click to apply from course cards
+        document.querySelectorAll(".select-course-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const course = btn.dataset.course;
+                const dept = btn.dataset.dept;
+                if (course) courseSelect.value = course;
+                if (dept) deptSelect.value = dept;
+                const formSection = document.getElementById("apply-now");
+                formSection.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("applicantName").focus();
+            });
+        });
+
+        // AI Predictor logic
+        const calcBtn = document.getElementById("calcBtn");
+        const predMarks = document.getElementById("predMarks");
+        const predCourse = document.getElementById("predCourse");
+        const predProbTag = document.getElementById("predProbTag");
+        const predMessage = document.getElementById("predMessage");
+        const predScholarship = document.getElementById("predScholarship");
+
+        async function runPredictor() {
+            const marksVal = parseFloat(predMarks.value) || 0;
+            const courseVal = predCourse.value;
+            calcBtn.disabled = true;
+            calcBtn.textContent = "Calculating...";
+
+            try {
+                const res = await fetch(`${API_BASE}/predict`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ marks: marksVal, course: courseVal })
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || "Evaluation failed");
+
+                predProbTag.textContent = `${data.prediction} Chance`;
+                predProbTag.className = `prob-tag ${data.prediction.toLowerCase()}`;
+                predMessage.textContent = data.message;
+                predScholarship.textContent = data.scholarship;
+            } catch (err) {
+                // Client-side fallback if backend unreachable
+                if (marksVal >= 80) {
+                    predProbTag.textContent = "High Chance";
+                    predProbTag.className = "prob-tag high";
+                    predMessage.textContent = "Outstanding score! High direct admission probability in 1st round.";
+                    predScholarship.textContent = "Eligible for 50% - 100% Merit Scholarship";
+                } else if (marksVal >= 60) {
+                    predProbTag.textContent = "High Chance";
+                    predProbTag.className = "prob-tag high";
+                    predMessage.textContent = "Very good score! High chance of admission in your selected course.";
+                    predScholarship.textContent = "Eligible for 25% Merit Scholarship";
+                } else if (marksVal >= 45) {
+                    predProbTag.textContent = "Moderate Chance";
+                    predProbTag.className = "prob-tag moderate";
+                    predMessage.textContent = "Eligible for counseling round and seat confirmation.";
+                    predScholarship.textContent = "Standard Merit Seat";
+                } else {
+                    predProbTag.textContent = "Low Chance";
+                    predProbTag.className = "prob-tag low";
+                    predMessage.textContent = "Marks below minimum criteria (45%). Please contact admission counselor.";
+                    predScholarship.textContent = "Counseling Needed";
+                }
+            } finally {
+                calcBtn.disabled = false;
+                calcBtn.textContent = "Predict Admission Chances ⚡";
+            }
+        }
+
+        calcBtn.addEventListener("click", runPredictor);
+
+        // Admission Form submission
+        const admissionForm = document.getElementById("admissionForm");
+        const admissionFeedback = document.getElementById("admissionFeedback");
+        const submitBtn = document.getElementById("submitApplicationBtn");
+
+        admissionForm.addEventListener("submit", async event => {
+            event.preventDefault();
+            admissionFeedback.className = "form-feedback";
+            admissionFeedback.textContent = "Submitting your admission application...";
+            submitBtn.disabled = true;
+
+            const payload = {
+                name: document.getElementById("applicantName").value.trim(),
+                email: document.getElementById("applicantEmail").value.trim(),
+                phone: document.getElementById("applicantPhone").value.trim(),
+                marks: document.getElementById("applicantMarks").value.trim(),
+                department: document.getElementById("departmentSelect").value,
+                course: document.getElementById("courseSelect").value,
+                city: document.getElementById("applicantCity").value.trim(),
+                state: document.getElementById("applicantState").value.trim(),
+                message: document.getElementById("applicantMessage").value.trim(),
+                source: "Admissions Portal 2026"
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/lead`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.error || "Submission failed");
+
+                admissionFeedback.className = "form-feedback success";
+                const refCode = result.ref_id || ("CUTM-" + Math.floor(100000 + Math.random() * 900000));
+                admissionFeedback.innerHTML = `🎉 <strong>Application Submitted Successfully!</strong><br>Your Official Reference ID is <strong style="color:var(--navy);font-size:16px;">${refCode}</strong> (Merit Score: ${result.score || 'Evaluated'}).<br>Our CUTM admissions team has received your details and will contact you at <strong>${payload.phone}</strong> within 24 hours.`;
+                admissionForm.reset();
+            } catch (error) {
+                admissionFeedback.className = "form-feedback error";
+                admissionFeedback.textContent = `Could not submit application: ${error.message}. Please ensure the server is active or call helpline 1800-123-4567.`;
+            } finally {
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
+

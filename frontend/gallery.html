@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Campus life, workshops, events, and student moments at CUTM - Centurion University of Technology and Management.">
+    <title>Campus Gallery | CUTM</title>
+    <link rel="icon" type="image/png" href="images/cutm_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
+    <style>
+        .gallery-hero {
+            position: relative;
+            min-height: 320px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background: linear-gradient(90deg, rgba(10,32,60,0.92) 0%, rgba(10,32,60,0.75) 60%, rgba(10,32,60,0.40) 100%),
+                        url("images/cutm_photo_3.webp") center/cover;
+            padding: 60px 0;
+        }
+        .gallery-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--line);
+            background: #fff;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .gallery-card.featured {
+            grid-column: span 2;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: transform .35s ease;
+        }
+        .gallery-card.featured img {
+            height: 340px;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.04);
+        }
+        .gallery-card-caption {
+            padding: 14px 18px;
+            background: #fff;
+            border-top: 1px solid #edf2f7;
+        }
+        .gallery-card-caption h4 {
+            margin: 0 0 4px;
+            color: var(--navy);
+            font: 700 15px Manrope, sans-serif;
+        }
+        .gallery-card-caption p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 12px;
+        }
+        @media (max-width: 850px) {
+            .gallery-showcase { grid-template-columns: repeat(2, 1fr); }
+            .gallery-card.featured { grid-column: span 2; }
+        }
+        @media (max-width: 580px) {
+            .gallery-showcase { grid-template-columns: 1fr; }
+            .gallery-card.featured { grid-column: auto; }
+            .gallery-card img, .gallery-card.featured img { height: 230px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="notice-banner">
+        <div class="container notice-inner">
+            <span><strong class="notice-pill">CUTM Admissions 2026-27 Open</strong> Apply for B.Tech (CSE, ECE, Mech, Civil), Diploma, Agriculture, BBA &amp; B.Sc Nursing.</span>
+            <span>Helpline: <strong>1800-123-CUTM</strong> | <a class="notice-link" href="admissions.html">Apply Online ↗</a></span>
+        </div>
+    </div>
+
+    <div class="topline">
+        <div class="container topline-inner">
+            <span>CUTM · Centurion University of Technology and Management | Shaping Lives, Empowering Communities</span>
+            <span>Contact Desk: <a href="mailto:admissions@cutm.ac.in">admissions@cutm.ac.in</a> &nbsp;|&nbsp; <a href="login.html" style="font-weight:700;color:var(--gold);">🔐 Login / Register</a></span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="CUTM home">
+                <img src="images/cutm_logo.png" alt="CUTM Logo" class="brand-logo-img">
+                <span class="brand-name">CUTM<span class="brand-caption">CENTURION UNIVERSITY · SHAPING LIVES</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="overview.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="index.html#events">Events</a>
+                <a class="active" href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cta" href="admissions.html">Apply Now <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="gallery-hero">
+            <div class="container">
+                <span class="eyebrow" style="color:#ffcf5c">Campus Life &amp; Heritage</span>
+                <h1 style="max-width:760px;margin:16px 0 12px;font:800 clamp(32px, 5vw, 50px)/1.15 Manrope, sans-serif;">
+                    Moments of Learning, Innovation &amp; Discovery
+                </h1>
+                <p style="max-width:620px;color:#e3ecf5;font-size:15px;line-height:1.75;margin:0;">
+                    Experience the vibrant culture, advanced labs, student achievements, and world-class campus facilities at Centurion University of Technology and Management (CUTM).
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Visual Tour</span>
+                    <h2>CUTM Campus Showcase</h2>
+                    <p>Highlights of academic sessions, campus infrastructure, technical workshops, and university events.</p>
+                </div>
+
+                <div class="gallery-showcase">
+                    <!-- Photo 3: Featured -->
+                    <div class="gallery-card featured">
+                        <img src="images/cutm_photo_3.webp" alt="CUTM Campus Event and Student Gathering" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Convocation &amp; University Celebrations</h4>
+                            <p>Celebrating student excellence, leadership, and graduation milestones at CUTM.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_5.webp" alt="CUTM Modern Campus Infrastructure" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Campus Architecture &amp; Facilities</h4>
+                            <p>Smart classrooms, research wings, and eco-friendly green university spaces.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 1 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_1.webp" alt="CUTM High-Tech Labs and Practice" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Hands-on Engineering &amp; Skill Labs</h4>
+                            <p>Practical training in state-of-the-art technological laboratories.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_4.webp" alt="CUTM Student Collaborations" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Student Life &amp; Innovation Clubs</h4>
+                            <p>Curiosity-driven peer collaboration, hackathons, and creative projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_6.webp" alt="CUTM Cultural & Sports Activities" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Cultural Fests &amp; Sports Complex</h4>
+                            <p>All-round development through annual athletic meets and vibrant cultural festivals.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_7.webp" alt="CUTM Agricultural and Field Work" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Agricultural Research Farmland</h4>
+                            <p>Field agronomy, organic polyhouses, and soil science demonstrations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_8.webp" alt="CUTM Healthcare and Nursing Sessions" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Healthcare &amp; Clinical Training</h4>
+                            <p>Simulated patient care, anatomy sessions, and hospital ward rotations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 9 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_9.webp" alt="CUTM Technical Workshop" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Industry Workshop &amp; Prototyping</h4>
+                            <p>Mechanical machining, electronics prototyping, and 3D printing labs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 10 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_10.jpg" alt="CUTM Campus Moments" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Campus Community &amp; Events</h4>
+                            <p>Interactive seminars with national industry leaders and visiting academicians.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 11 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_11.jpg" alt="CUTM Student Discussions" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Library &amp; Collaborative Learning</h4>
+                            <p>Modern digital library resources and quiet study spaces.</p>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2 -->
+                    <div class="gallery-card">
+                        <img src="images/cutm_photo_2.jpg" alt="CUTM Student Milestones" loading="lazy">
+                        <div class="gallery-card-caption">
+                            <h4>Leadership &amp; Placement Success</h4>
+                            <p>Honoring campus placement record-holders and young entrepreneurs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section pale">
+            <div class="container" style="text-align:center;">
+                <span class="eyebrow">Be Part of CUTM</span>
+                <h2 style="color:var(--navy);font:800 28px Manrope, sans-serif;margin:12px 0 16px;">Ready to Join the Centurion Family?</h2>
+                <p style="color:var(--muted);max-width:580px;margin:0 auto 24px;font-size:14px;line-height:1.7;">
+                    Admissions for 2026-2027 are actively open across all engineering, diploma, agriculture, business, and healthcare departments.
+                </p>
+                <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+                    <a class="button" href="admissions.html">Apply for Admission 2026-27 →</a>
+                    <a class="button btn-outline" href="courses.html">View Degree Programs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <strong>CUTM · CENTURION UNIVERSITY</strong>
+            <span>© 2026 Centurion University of Technology and Management (CUTM). Shaping lives, empowering communities.</span>
+            <a href="admissions.html">Admissions 2026</a>
+            <a href="login.html">Portal Login &amp; Register</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById("menuToggle");
+        const menu = document.getElementById("navLinks");
+        menuButton.addEventListener("click", () => {
+            const open = menuButton.getAttribute("aria-expanded") !== "true";
+            menuButton.setAttribute("aria-expanded", String(open));
+            menu.classList.toggle("open", open);
+        });
+    </script>
+</body>
+</html>

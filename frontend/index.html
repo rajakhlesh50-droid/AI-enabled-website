@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover conferences, workshops and seminars at AI University.">
+    <title>Centurion University of Technology and Management (CUTM) | Official Portal</title>
+    <link rel="icon" type="image/png" href="images/cutm_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #102b4e;
+            --blue: #1458a6;
+            --gold: #edaa32;
+            --ink: #17283d;
+            --muted: #64748b;
+            --pale: #f4f7fb;
+            --line: #e4eaf1;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: #fff;
+            font-family: "DM Sans", sans-serif;
+        }
+        a { color: inherit; text-decoration: none; }
+        button, input { font: inherit; }
+        .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+
+        .topline { background: var(--navy); color: #dce7f3; font-size: 12px; }
+        .topline-inner { min-height: 36px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .topline a { color: #fff; }
+        .site-header { position: sticky; z-index: 5; top: 0; background: #fff; box-shadow: 0 3px 18px #102b4e0c; }
+        .nav-inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+        .brand { display: flex; align-items: center; gap: 12px; color: var(--navy); }
+        .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px 12px 12px 4px; background: var(--gold); color: var(--navy); font: 800 21px Manrope, sans-serif; }
+        .brand-name { font: 800 17px Manrope, sans-serif; line-height: 1.15; }
+        .brand-caption { display: block; margin-top: 4px; color: var(--muted); font: 600 9px "DM Sans", sans-serif; letter-spacing: 1.35px; }
+        .nav-links { display: flex; align-items: center; gap: 27px; font-size: 13px; font-weight: 600; }
+        .nav-links a { padding: 8px 0; color: #405168; }
+        .nav-links a:hover, .nav-links a.active { color: var(--blue); }
+        .nav-links .apply-link { padding: 12px 18px; border-radius: 6px; background: var(--blue); color: white; }
+        .menu-toggle { display: none; border: 0; background: transparent; color: var(--navy); font-size: 24px; cursor: pointer; }
+
+        .hero {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            background:
+                linear-gradient(90deg, rgba(10, 32, 60, .92) 0%, rgba(10, 32, 60, .75) 48%, rgba(10, 32, 60, .26) 100%),
+                url("images/cutm_campus_hero.jpg") center 45% / cover;
+        }
+        .hero-content { max-width: 720px; padding: 70px 0 76px; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .eyebrow::before { width: 25px; height: 2px; background: currentColor; content: ""; }
+        h1, h2, h3, p { margin-top: 0; }
+        .hero h1 { max-width: 690px; margin: 19px 0 16px; font: 800 clamp(36px, 5vw, 56px)/1.12 Manrope, sans-serif; letter-spacing: -1.8px; }
+        .hero p { max-width: 590px; margin-bottom: 28px; color: #e3ebf4; font-size: 16px; line-height: 1.75; }
+        .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 46px; padding: 0 20px; border: 0; border-radius: 5px; background: var(--gold); color: #152b45; font-size: 13px; font-weight: 700; cursor: pointer; transition: transform .2s, background .2s; }
+        .button:hover { transform: translateY(-2px); background: #f4ba50; }
+        .hero .button { min-width: 158px; }
+        .hero-link { margin-left: 20px; color: white; font-size: 13px; font-weight: 700; }
+
+        .quick-stats { position: relative; z-index: 1; margin-top: -1px; background: var(--navy); color: white; }
+        .stats-inner { display: grid; grid-template-columns: repeat(3, 1fr); }
+        .stat { display: flex; align-items: center; gap: 15px; min-height: 94px; padding: 17px 30px; border-right: 1px solid #ffffff25; }
+        .stat:first-child { padding-left: 0; }
+        .stat:last-child { border-right: 0; }
+        .stat-icon { display: grid; width: 44px; height: 44px; place-items: center; border-radius: 50%; background: #ffffff14; color: var(--gold); font-size: 20px; }
+        .stat strong { display: block; font: 800 22px Manrope, sans-serif; }
+        .stat span:last-child { display: block; margin-top: 3px; color: #c6d3e1; font-size: 12px; }
+
+        .events-section { padding: 82px 0 90px; background: var(--pale); }
+        .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 29px; }
+        .section-heading h2 { margin: 12px 0 8px; color: var(--navy); font: 800 clamp(26px, 3vw, 36px)/1.2 Manrope, sans-serif; letter-spacing: -.8px; }
+        .section-heading p { margin-bottom: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+        .search-wrap { position: relative; width: min(280px, 100%); }
+        .search-wrap input { width: 100%; height: 44px; padding: 0 14px 0 40px; border: 1px solid var(--line); border-radius: 5px; outline: none; background: #fff; color: var(--ink); font-size: 13px; }
+        .search-wrap input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px #1458a614; }
+        .search-icon { position: absolute; top: 12px; left: 14px; color: #8492a4; }
+        .filters { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 27px; }
+        .filter-button { min-height: 36px; padding: 0 15px; border: 1px solid #dce4ed; border-radius: 4px; background: #fff; color: #526277; font-size: 12px; font-weight: 700; cursor: pointer; }
+        .filter-button:hover, .filter-button.active { border-color: var(--blue); background: var(--blue); color: #fff; }
+        .event-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .event-card { overflow: hidden; border: 1px solid #e8edf3; border-radius: 7px; background: #fff; box-shadow: 0 8px 25px #102b4e08; transition: transform .2s, box-shadow .2s; }
+        .event-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px #102b4e15; }
+        .event-image { position: relative; height: 190px; background-position: center; background-size: cover; }
+        .event-tag { position: absolute; top: 14px; left: 14px; padding: 7px 10px; border-radius: 3px; background: var(--gold); color: #20364f; font-size: 10px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; }
+        .event-content { padding: 20px 20px 18px; }
+        .event-date { display: flex; align-items: center; gap: 7px; margin-bottom: 11px; color: var(--blue); font-size: 11px; font-weight: 700; }
+        .event-content h3 { min-height: 49px; margin-bottom: 10px; color: var(--navy); font: 700 17px/1.45 Manrope, sans-serif; }
+        .event-content p { min-height: 60px; margin-bottom: 16px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+        .event-meta { display: flex; justify-content: space-between; gap: 12px; padding-top: 13px; border-top: 1px solid #edf0f4; color: #64748b; font-size: 11px; }
+        .event-meta span:first-child { color: var(--blue); font-weight: 700; }
+        .event-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 15px; }
+        .register-button { padding: 9px 13px; border: 0; border-radius: 4px; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; cursor: pointer; }
+        .register-button:hover { background: var(--navy); }
+        .event-capacity { color: var(--muted); font-size: 10px; }
+        .empty-state { grid-column: 1 / -1; padding: 45px 20px; border-radius: 6px; background: #fff; color: var(--muted); text-align: center; }
+        .registration-dialog { width: min(460px, calc(100% - 30px)); padding: 0; border: 0; border-radius: 10px; color: var(--ink); box-shadow: 0 20px 70px #102b4e45; }
+        .registration-dialog::backdrop { background: #0c2039a8; }
+        .registration-content { padding: 25px; }
+        .registration-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+        .registration-title-row h2 { margin: 0 0 6px; color: var(--navy); font: 800 21px Manrope, sans-serif; }
+        .registration-title-row p { color: var(--muted); font-size: 12px; line-height: 1.5; }
+        .registration-close { border: 0; background: transparent; color: var(--muted); font-size: 24px; cursor: pointer; }
+        .registration-form { display: grid; gap: 13px; }
+        .registration-form label { display: grid; gap: 6px; color: #405168; font-size: 11px; font-weight: 700; }
+        .registration-form input { width: 100%; min-height: 42px; padding: 0 11px; border: 1px solid var(--line); border-radius: 5px; outline: none; font-size: 13px; }
+        .registration-form input:focus { border-color: var(--blue); }
+        .registration-form button { min-height: 44px; margin-top: 4px; border: 0; border-radius: 5px; background: var(--blue); color: white; font-weight: 700; cursor: pointer; }
+        .form-feedback { min-height: 16px; margin: 0; color: #a32323; font-size: 12px; }
+
+        .cta-section { padding: 68px 0; background: #fff; }
+        .cta-card { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 40px 45px; border-radius: 8px; background: #eaf1f8; }
+        .cta-card h2 { margin: 0 0 8px; color: var(--navy); font: 800 24px Manrope, sans-serif; }
+        .cta-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+        .cta-card .button { flex: 0 0 auto; background: var(--blue); color: white; }
+        .site-footer { padding: 29px 0; background: #0c2039; color: #c2cedb; }
+        .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 11px; }
+        .footer-inner strong { color: #fff; font-family: Manrope, sans-serif; }
+
+        .chat-launcher { position: fixed; z-index: 8; right: 25px; bottom: 24px; display: flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 19px; border: 0; border-radius: 28px; background: var(--blue); box-shadow: 0 8px 25px #0b366055; color: #fff; font-size: 13px; font-weight: 700; cursor: pointer; }
+        .chat-launcher:hover { background: var(--navy); }
+        .chat-window { position: fixed; z-index: 9; right: 25px; bottom: 91px; display: flex; width: min(360px, calc(100vw - 32px)); height: 455px; flex-direction: column; overflow: hidden; border: 1px solid #dce4ed; border-radius: 12px; background: white; box-shadow: 0 18px 55px #102b4e2b; }
+        .chat-window[hidden] { display: none; }
+        .chat-header { display: flex; align-items: center; justify-content: space-between; padding: 16px; background: var(--navy); color: #fff; }
+        .chat-header strong { display: block; font: 700 14px Manrope, sans-serif; }
+        .chat-header small { display: block; margin-top: 4px; color: #cfdae6; font-size: 10px; }
+        .chat-close { border: 0; background: transparent; color: #fff; font-size: 22px; cursor: pointer; }
+        .chat-messages { display: flex; flex: 1; flex-direction: column; gap: 10px; overflow-y: auto; padding: 16px; background: #f8fafc; }
+        .chat-message { max-width: 88%; padding: 10px 12px; border-radius: 10px; font-size: 12px; line-height: 1.55; white-space: pre-wrap; }
+        .chat-message.bot { align-self: flex-start; border: 1px solid #e5eaf0; border-bottom-left-radius: 3px; background: white; color: #34445a; }
+        .chat-message.user { align-self: flex-end; border-bottom-right-radius: 3px; background: var(--blue); color: white; }
+        .chat-compose { display: flex; gap: 8px; padding: 12px; border-top: 1px solid var(--line); }
+        .chat-compose input { min-width: 0; height: 42px; flex: 1; padding: 0 12px; border: 1px solid var(--line); border-radius: 5px; outline: none; font-size: 12px; }
+        .chat-compose input:focus { border-color: var(--blue); }
+        .chat-compose button { width: 44px; border: 0; border-radius: 5px; background: var(--blue); color: #fff; font-size: 18px; cursor: pointer; }
+
+        @media (max-width: 850px) {
+            .nav-links { gap: 15px; }
+            .event-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat { padding-right: 15px; padding-left: 15px; }
+        }
+        @media (max-width: 650px) {
+            .container { width: min(100% - 30px, 520px); }
+            .topline-inner { justify-content: center; }
+            .topline-inner span:last-child { display: none; }
+            .nav-inner { min-height: 68px; }
+            .menu-toggle { display: block; }
+            .nav-links { position: absolute; top: 68px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 8px 20px 18px; border-top: 1px solid var(--line); background: #fff; box-shadow: 0 12px 16px #102b4e10; }
+            .nav-links.open { display: flex; flex-direction: column; }
+            .nav-links a { padding: 12px 5px; }
+            .nav-links .apply-link { margin-top: 6px; text-align: center; }
+            .hero { min-height: 360px; background-position: 58% center; }
+            .hero-content { padding: 58px 0; }
+            .hero h1 { letter-spacing: -1px; }
+            .hero p { font-size: 14px; }
+            .stats-inner { grid-template-columns: 1fr; padding: 7px 0; }
+            .stat, .stat:first-child { min-height: 72px; padding: 10px 0; border-right: 0; border-bottom: 1px solid #ffffff25; }
+            .stat:last-child { border-bottom: 0; }
+            .stat-icon { width: 38px; height: 38px; }
+            .events-section { padding: 58px 0; }
+            .section-heading { align-items: stretch; flex-direction: column; gap: 18px; }
+            .search-wrap { width: 100%; }
+            .event-grid { grid-template-columns: 1fr; gap: 16px; }
+            .event-content h3, .event-content p { min-height: 0; }
+            .cta-card { align-items: flex-start; flex-direction: column; padding: 29px 24px; }
+            .footer-inner { align-items: flex-start; flex-direction: column; gap: 8px; }
+            .chat-launcher { right: 16px; bottom: 16px; min-height: 50px; }
+            .chat-window { right: 16px; bottom: 78px; height: min(455px, calc(100vh - 105px)); }
+        }
+
+        .notice-banner {
+            background: linear-gradient(90deg, #0e2746 0%, #16467e 50%, #0e2746 100%);
+            color: #fff;
+            padding: 9px 0;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(237, 170, 50, 0.35);
+        }
+        .notice-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .notice-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .notice-link {
+            color: #ffda85;
+            font-weight: 700;
+        }
+        .dept-home-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 28px;
+        }
+        .dept-home-card {
+            padding: 24px;
+            border: 1px solid #e4ecf5;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 4px 18px rgba(16, 43, 78, 0.05);
+            transition: transform .2s ease, box-shadow .2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .dept-home-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(16, 43, 78, 0.1);
+        }
+        .dept-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+        .dept-tag.eng { background: #e0f2fe; color: #0369a1; }
+        .dept-tag.dip { background: #fef3c7; color: #92400e; }
+        .dept-tag.agr { background: #dcfce7; color: #166534; }
+        .dept-tag.mgt { background: #f3e8ff; color: #7e22ce; }
+        .dept-tag.nur { background: #ffe4e6; color: #be123c; }
+    </style>
+</head>
+<body>
+    <div class="notice-banner">
+        <div class="container notice-inner">
+            <span><strong class="notice-pill">CUTM Admissions 2026-27 Open</strong> Apply for B.Tech (CSE, ECE, Mech, Civil), Diploma, Agriculture, BBA &amp; B.Sc Nursing.</span>
+            <span>Helpline: <strong>1800-123-CUTM</strong> | <a class="notice-link" href="admissions.html">Admissions Portal ↗</a></span>
+        </div>
+    </div>
+
+    <div class="topline">
+        <div class="container topline-inner">
+            <span>CUTM · Centurion University of Technology and Management | Shaping Lives, Empowering Communities</span>
+            <span>Admissions Desk: <a href="mailto:admissions@cutm.ac.in">admissions@cutm.ac.in</a> &nbsp;|&nbsp; <a href="login.html" style="font-weight:700;color:var(--gold);">🔐 Login / Register</a></span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="CUTM home">
+                <img src="images/cutm_logo.png" alt="CUTM Logo" class="brand-logo-img">
+                <span class="brand-name">CUTM<span class="brand-caption">CENTURION UNIVERSITY · SHAPING LIVES</span></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="overview.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="#events">Events</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a class="apply-link" href="admissions.html">Apply Now <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <span class="eyebrow">Academic Excellence &amp; Innovation</span>
+                <h1>Shape Your Tomorrow at CUTM</h1>
+                <p>Centurion University of Technology and Management (CUTM) — empowering students through industry-driven education. Explore B.Tech (CSE, ECE, Mechanical, Civil), Diploma, Agriculture, BBA, and B.Sc Nursing degrees.</p>
+                <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+                    <a class="button" href="admissions.html" style="background:var(--gold);color:var(--navy)">Apply for Admission 2026-27 <span aria-hidden="true">→</span></a>
+                    <a class="hero-link" href="courses.html">Explore All Courses <span aria-hidden="true">↓</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-stats" aria-label="University highlights">
+            <div class="container stats-inner">
+                <div class="stat"><span class="stat-icon" aria-hidden="true">🎓</span><span><strong>8+ Programs</strong><span>B.Tech, Diploma, Agri, Nursing, BBA</span></span></div>
+                <div class="stat"><span class="stat-icon" aria-hidden="true">⚡</span><span><strong>Admissions Open</strong><span>Academic Session 2026-2027</span></span></div>
+                <div class="stat"><span class="stat-icon" aria-hidden="true">🏆</span><span><strong>100% Placement</strong><span>Top MNCs &amp; ₹32 LPA Highest CTC</span></span></div>
+            </div>
+        </section>
+
+        <!-- Academic Departments & Admissions Highlight -->
+        <section class="section" style="padding:65px 0 55px;background:#fff;" id="departments">
+            <div class="container">
+                <div class="section-heading" style="text-align:left;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;">
+                    <div>
+                        <span class="eyebrow">Featured Departments</span>
+                        <h2>Degree &amp; Diploma Programs Offered</h2>
+                        <p>Industry-aligned degrees built with state-of-the-art laboratory infrastructure and top faculty.</p>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <a class="button" href="courses.html" style="background:#eaf1f8;color:var(--navy)">View All Courses →</a>
+                        <a class="button" href="admissions.html" style="background:var(--blue);color:#fff">Apply Online Now ↗</a>
+                    </div>
+                </div>
+
+                <div class="dept-home-grid">
+                    <!-- B.Tech Card -->
+                    <div class="dept-home-card">
+                        <div>
+                            <span class="dept-tag eng">Engineering &amp; Tech</span>
+                            <h3 style="margin:0 0 10px;color:var(--navy);font:800 18px Manrope, sans-serif;">
+                                B.Tech Programs (4 Years)
+                            </h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;">
+                                High-demand engineering branches with advanced labs:
+                            </p>
+                            <ul style="padding-left:18px;margin:0 0 16px;color:#334155;font-size:12px;line-height:1.7;">
+                                <li><strong>Computer Science &amp; Engg (CSE)</strong> - AI/ML &amp; Cloud</li>
+                                <li><strong>Electronics &amp; Comm. (ECE)</strong> - VLSI &amp; IoT</li>
+                                <li><strong>Mechanical Engineering</strong> - Robotics &amp; EV</li>
+                                <li><strong>Civil Engineering</strong> - Smart Cities &amp; Surveying</li>
+                            </ul>
+                        </div>
+                        <a href="admissions.html?course=cse" style="color:var(--blue);font-weight:700;font-size:12px;">Apply for B.Tech →</a>
+                    </div>
+
+                    <!-- Diploma Card -->
+                    <div class="dept-home-card">
+                        <div>
+                            <span class="dept-tag dip">Polytechnic</span>
+                            <h3 style="margin:0 0 10px;color:var(--navy);font:800 18px Manrope, sans-serif;">
+                                Diploma in Engineering
+                            </h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;">
+                                3-Year skill-based technical education after 10th or 12th/ITI with hands-on workshop training &amp; lateral entry to B.Tech 2nd year.
+                            </p>
+                            <p style="color:var(--muted);font-size:12px;margin:0 0 14px;">
+                                <strong>Streams:</strong> Mechanical, Civil, Electrical, CSE.
+                            </p>
+                        </div>
+                        <a href="admissions.html?course=diploma" style="color:var(--blue);font-weight:700;font-size:12px;">Apply for Diploma →</a>
+                    </div>
+
+                    <!-- Agriculture Card -->
+                    <div class="dept-home-card">
+                        <div>
+                            <span class="dept-tag agr">Agricultural Sciences</span>
+                            <h3 style="margin:0 0 10px;color:var(--navy);font:800 18px Manrope, sans-serif;">
+                                B.Sc. (Hons.) Agriculture
+                            </h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;">
+                                4-Year professional degree covering Modern Agronomy, Precision Farming, Soil Science, Horticulture, and Agri-Business on university research farms.
+                            </p>
+                        </div>
+                        <a href="admissions.html?course=agriculture" style="color:var(--blue);font-weight:700;font-size:12px;">Apply for Agriculture →</a>
+                    </div>
+
+                    <!-- BBA Card -->
+                    <div class="dept-home-card">
+                        <div>
+                            <span class="dept-tag mgt">Management</span>
+                            <h3 style="margin:0 0 10px;color:var(--navy);font:800 18px Manrope, sans-serif;">
+                                BBA (Business Administration)
+                            </h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;">
+                                3-Year undergraduate program in Marketing, Financial Analytics, Human Resources, and Entrepreneurship with live corporate internships.
+                            </p>
+                        </div>
+                        <a href="admissions.html?course=bba" style="color:var(--blue);font-weight:700;font-size:12px;">Apply for BBA →</a>
+                    </div>
+
+                    <!-- B.Sc Nursing Card -->
+                    <div class="dept-home-card">
+                        <div>
+                            <span class="dept-tag nur">Healthcare &amp; Nursing</span>
+                            <h3 style="margin:0 0 10px;color:var(--navy);font:800 18px Manrope, sans-serif;">
+                                B.Sc. Nursing (4 Years)
+                            </h3>
+                            <p style="color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:14px;">
+                                INC-approved degree with clinical rotations in 500+ bed multi-specialty partner hospitals, anatomy simulation, and 100% placement support.
+                            </p>
+                        </div>
+                        <a href="admissions.html?course=nursing" style="color:var(--blue);font-weight:700;font-size:12px;">Apply for B.Sc Nursing →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Infrastructure & Scenic Environment Showcase -->
+        <section class="section" style="padding: 72px 0 68px; background: #f8fafc; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);" id="campus-tour">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 38px; align-items: center;">
+                    <div style="position: relative; border-radius: 14px; overflow: hidden; box-shadow: 0 16px 40px rgba(16,43,78,0.14); border: 1px solid var(--line);">
+                        <img src="images/cutm_campus_hero.jpg" alt="Centurion University of Technology and Management (CUTM) Scenic Campus" style="width: 100%; height: 380px; object-fit: cover; display: block; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                        <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 18px 20px; background: linear-gradient(transparent, rgba(10,32,60,0.92)); color: white;">
+                            <span style="font-size: 11px; font-weight: 700; color: var(--gold); letter-spacing: 1px; text-transform: uppercase;">CUTM Scenic Campus Overview</span>
+                            <h3 style="margin: 4px 0 0; font: 800 18px Manrope, sans-serif; color: white;">Modern Academic Complexes &amp; Research Polyhouses</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="eyebrow">Inspiring Learning Atmosphere</span>
+                        <h2 style="color: var(--navy); font: 800 28px Manrope, sans-serif; margin: 12px 0 14px; line-height: 1.25;">Experience World-Class Education in Harmony with Nature</h2>
+                        <p style="color: var(--muted); font-size: 14px; line-height: 1.75; margin-bottom: 22px;">
+                            Centurion University of Technology and Management (CUTM) is set across sprawling lush green acres nestled against picturesque hills. Our campus integrates advanced academic departments, smart simulation laboratories, experiential agriculture polyhouses, student hostels, and covered scenic pathways.
+                        </p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 26px;">
+                            <div style="background: white; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(16,43,78,0.03);">
+                                <strong style="color: var(--navy); display: block; font-size: 15px; margin-bottom: 2px;">🌲 100+ Acres</strong>
+                                <span style="font-size: 12px; color: var(--muted);">Pollution-Free Green Campus</span>
+                            </div>
+                            <div style="background: white; padding: 14px 16px; border-radius: 8px; border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(16,43,78,0.03);">
+                                <strong style="color: var(--navy); display: block; font-size: 15px; margin-bottom: 2px;">🔬 50+ Modern Labs</strong>
+                                <span style="font-size: 12px; color: var(--muted);">AI, Robotics, VLSI &amp; Nursing</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a class="button" href="gallery.html" style="background: var(--navy); color: white;">View Campus Photo Gallery →</a>
+                            <a class="button btn-outline" href="admissions.html" style="color: var(--navy); border: 1px solid #bfd2e5; background: white;">Book Campus Tour / Apply ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section" id="events">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">What's happening</span>
+                        <h2>Explore upcoming programs</h2>
+                        <p>Find a space to share ideas, learn something new and meet your community.</p>
+                    </div>
+                    <label class="search-wrap">
+                        <span class="search-icon" aria-hidden="true">⌕</span>
+                        <input id="eventSearch" type="search" placeholder="Search events..." aria-label="Search events">
+                    </label>
+                </div>
+                <div class="filters" role="group" aria-label="Filter events by type">
+                    <button class="filter-button active" data-filter="All" aria-pressed="true">All programs</button>
+                    <button class="filter-button" data-filter="Conference" aria-pressed="false">Conferences</button>
+                    <button class="filter-button" data-filter="Workshop" aria-pressed="false">Workshops</button>
+                    <button class="filter-button" data-filter="Seminar" aria-pressed="false">Seminars</button>
+                </div>
+                <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="host-an-event">
+            <div class="container cta-card">
+                <div>
+                    <h2>Have an idea worth sharing?</h2>
+                    <p>Bring your conference, workshop or seminar idea to our community. We would love to hear from you.</p>
+                </div>
+                <a class="button" href="contact.html">Talk to our team <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <strong>CUTM · CENTURION UNIVERSITY</strong>
+            <span>© 2026 Centurion University of Technology and Management (CUTM). Shaping lives, empowering communities.</span>
+            <a href="admissions.html">Admissions 2026-27</a>
+            <a href="courses.html">Academic Programs</a>
+            <a href="contact.html">Contact Admissions</a>
+            <a href="login.html">Portal Login &amp; Register</a>
+        </div>
+    </footer>
+
+    <dialog class="registration-dialog" id="registrationDialog">
+        <div class="registration-content">
+            <div class="registration-title-row">
+                <div><h2>Register for an event</h2><p id="registrationEventTitle">Add your details to reserve your place.</p></div>
+                <button class="registration-close" id="registrationClose" type="button" aria-label="Close registration form">×</button>
+            </div>
+            <form class="registration-form" id="registrationForm">
+                <input id="registrationEventId" type="hidden">
+                <label for="registrationName">Full name<input id="registrationName" name="name" autocomplete="name" required maxlength="100"></label>
+                <label for="registrationEmail">Email address<input id="registrationEmail" name="email" type="email" autocomplete="email" required maxlength="254"></label>
+                <label for="registrationPhone">Phone number<input id="registrationPhone" name="phone" type="tel" autocomplete="tel" required maxlength="20"></label>
+                <p class="form-feedback" id="registrationFeedback" role="status"></p>
+                <button type="submit">Submit registration</button>
+            </form>
+        </div>
+    </dialog>
+
+    <button class="chat-launcher" id="chatLauncher" aria-label="Open CUTM AI Assistant" aria-controls="chatWindow" aria-expanded="false">
+        <span aria-hidden="true">✦</span> Ask CUTM Assistant
+    </button>
+    <section class="chat-window" id="chatWindow" aria-label="CUTM assistant chat" hidden>
+        <div class="chat-header">
+            <div><strong>CUTM Virtual Assistant</strong><small>Ask about CUTM admissions, B.Tech, Diploma, Agriculture, Nursing &amp; fees</small></div>
+            <button class="chat-close" id="chatClose" aria-label="Close chat">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+            <div class="chat-message bot">Hello! Welcome to Centurion University of Technology and Management (CUTM). I can help you with Admissions 2026-2027, Courses (B.Tech CSE, ECE, Mechanical, Civil, Diploma, Agriculture, BBA, B.Sc Nursing), fees, scholarships, and campus events. How can I help you today?</div>
+        </div>
+        <form class="chat-compose" id="chatForm">
+            <input id="chatInput" type="text" placeholder="Ask about CSE, Agriculture, BBA, Nursing, Fees..." autocomplete="off" aria-label="Your question" required>
+            <button type="submit" aria-label="Send message">➤</button>
+        </form>
+    </section>
+
+    <script>
+        const API_BASE = "http://127.0.0.1:5000";
+        let events = [];
+        let activeFilter = "All";
+        const eventGrid = document.getElementById("eventGrid");
+        const eventSearch = document.getElementById("eventSearch");
+
+        function escapeHtml(value) {
+            return String(value ?? "").replace(/[&<>"']/g, character => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+            })[character]);
+        }
+        function displayDate(value) {
+            const date = new Date(`${value}T00:00:00`);
+            return Number.isNaN(date.getTime()) ? value : new Intl.DateTimeFormat("en", {
+                year: "numeric", month: "long", day: "2-digit"
+            }).format(date);
+        }
+        function renderEvents() {
+            const term = eventSearch.value.trim().toLowerCase();
+            const visibleEvents = events.filter(event => {
+                const matchesType = activeFilter === "All" || event.type === activeFilter;
+                const matchesSearch = `${event.title} ${event.description} ${event.place} ${event.type}`.toLowerCase().includes(term);
+                return matchesType && matchesSearch;
+            });
+
+            if (!visibleEvents.length) {
+                eventGrid.innerHTML = '<div class="empty-state">No programs match your search. Try another keyword or event type.</div>';
+                return;
+            }
+
+            eventGrid.innerHTML = visibleEvents.map(event => `
+                <article class="event-card">
+                    <div class="event-image" role="img" aria-label="${escapeHtml(event.type)} event" style="background-image: url('${escapeHtml(event.image || "")}')">
+                        <span class="event-tag">${escapeHtml(event.type)}</span>
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date"><span aria-hidden="true">◷</span> ${escapeHtml(displayDate(event.date))}</div>
+                        <h3>${escapeHtml(event.title)}</h3>
+                        <p>${escapeHtml(event.description)}</p>
+                        <div class="event-meta"><span>${escapeHtml(event.format)}</span><span>${escapeHtml(event.place)}</span></div>
+                        <div class="event-actions"><span class="event-capacity">Join the conversation</span><button class="register-button" type="button" data-event-id="${escapeHtml(event.id)}">Register <span aria-hidden="true">→</span></button></div>
+                    </div>
+                </article>`).join("");
+            eventGrid.querySelectorAll(".register-button").forEach(button => {
+                button.addEventListener("click", () => openRegistration(button.dataset.eventId));
+            });
+        }
+
+        async function loadEvents() {
+            eventGrid.innerHTML = '<div class="empty-state">Loading upcoming programs...</div>';
+            try {
+                const response = await fetch(`${API_BASE}/events`);
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.error || "Could not load events.");
+                events = data;
+                renderEvents();
+            } catch (error) {
+                eventGrid.innerHTML = `<div class="empty-state">Events could not be loaded. Please start the backend and check its local database. ${escapeHtml(error.message)}</div>`;
+            }
+        }
+
+        document.querySelectorAll(".filter-button").forEach(button => {
+            button.addEventListener("click", () => {
+                activeFilter = button.dataset.filter;
+                document.querySelectorAll(".filter-button").forEach(item => {
+                    const selected = item === button;
+                    item.classList.toggle("active", selected);
+                    item.setAttribute("aria-pressed", String(selected));
+                });
+                renderEvents();
+            });
+        });
+        eventSearch.addEventListener("input", renderEvents);
+        loadEvents();
+
+        const registrationDialog = document.getElementById("registrationDialog");
+        const registrationForm = document.getElementById("registrationForm");
+        const registrationFeedback = document.getElementById("registrationFeedback");
+        function openRegistration(eventId) {
+            const selectedEvent = events.find(item => item.id === eventId);
+            if (!selectedEvent) return;
+            document.getElementById("registrationEventId").value = eventId;
+            document.getElementById("registrationEventTitle").textContent = selectedEvent.title;
+            registrationFeedback.textContent = "";
+            registrationForm.reset();
+            document.getElementById("registrationEventId").value = eventId;
+            registrationDialog.showModal();
+            document.getElementById("registrationName").focus();
+        }
+        document.getElementById("registrationClose").addEventListener("click", () => registrationDialog.close());
+        registrationDialog.addEventListener("click", event => {
+            if (event.target === registrationDialog) registrationDialog.close();
+        });
+        registrationForm.addEventListener("submit", async event => {
+            event.preventDefault();
+            registrationFeedback.textContent = "Submitting your registration...";
+            const submitButton = registrationForm.querySelector("button[type='submit']");
+            submitButton.disabled = true;
+            try {
+                const response = await fetch(`${API_BASE}/registrations`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: document.getElementById("registrationName").value.trim(),
+                        email: document.getElementById("registrationEmail").value.trim(),
+                        phone: document.getElementById("registrationPhone").value.trim(),
+                        event_id: document.getElementById("registrationEventId").value
+                    })
+                });
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.error || "Registration could not be submitted.");
+                registrationFeedback.textContent = "You're registered! We look forward to seeing you.";
+                registrationFeedback.style.color = "#16734a";
+                registrationForm.reset();
+                document.getElementById("registrationEventId").value = "";
+                window.setTimeout(() => registrationDialog.close(), 1400);
+            } catch (error) {
+                registrationFeedback.style.color = "#a32323";
+                registrationFeedback.textContent = error.message;
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+        menuToggle.addEventListener("click", () => {
+            const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            navLinks.classList.toggle("open", !expanded);
+        });
+        navLinks.addEventListener("click", event => {
+            if (event.target.closest("a")) {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        const chatWindow = document.getElementById("chatWindow");
+        const chatLauncher = document.getElementById("chatLauncher");
+        const chatInput = document.getElementById("chatInput");
+        const chatMessages = document.getElementById("chatMessages");
+
+        function toggleChat(open) {
+            chatWindow.hidden = !open;
+            chatLauncher.setAttribute("aria-expanded", String(open));
+            if (open) chatInput.focus();
+        }
+        function addMessage(text, sender) {
+            const message = document.createElement("div");
+            message.className = `chat-message ${sender}`;
+            message.textContent = text;
+            chatMessages.appendChild(message);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        chatLauncher.addEventListener("click", () => toggleChat(chatWindow.hidden));
+        document.getElementById("chatClose").addEventListener("click", () => toggleChat(false));
+        document.getElementById("chatForm").addEventListener("submit", async event => {
+            event.preventDefault();
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            addMessage(message, "user");
+            chatInput.value = "";
+            chatInput.disabled = true;
+            try {
+                const response = await fetch(`${API_BASE}/chat`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ message })
+                });
+                const data = await response.json();
+                if (!response.ok) throw new Error(data.error || "The assistant could not process that message.");
+                addMessage(data.reply, "bot");
+            } catch (error) {
+                addMessage(`Sorry, I couldn't reach the assistant. Please check that the backend is running. (${error.message})`, "bot");
+            } finally {
+                chatInput.disabled = false;
+                chatInput.focus();
+            }
+        });
+    </script>
+</body>
+</html>
